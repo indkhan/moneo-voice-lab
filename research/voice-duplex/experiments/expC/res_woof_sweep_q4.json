@@ -1,0 +1,52 @@
+{
+ "threads": "4",
+ "mode": "sweep",
+ "load_s": 0.5386876999982633,
+ "first_call_s": 0.9230545999889728,
+ "chunking": [
+  {
+   "schedule": [
+    1,
+    2,
+    4
+   ],
+   "ttfa_ms_median": 81.11174998339266,
+   "ttfa_ms_max": 175.97149999346584,
+   "rtf_rest_median": 2.5499147434148144,
+   "underruns_total": 1,
+   "needed_prebuffer_ms_max": 26.61030001123435,
+   "speech_ms_per_frame": 8.531693943513611,
+   "dec_ms_per_frame": 7.675734468612378
+  }
+ ],
+ "whole_sentence": [
+  {
+   "text": "Let me look through your transactions.",
+   "audio_s_last": 2.48,
+   "latents_s": 0.5637623000075109,
+   "dec_fp32_s": 0.3749819000076968,
+   "dec_int8_s": 0.5347311000223272,
+   "fp32_vs_int8_max_abs_diff": 0.0,
+   "time_to_audio_ms_nonstream": 938.7442000152078,
+   "dtype": "float32",
+   "latent_dtype": "float32"
+  },
+  {
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "audio_s_last": 8.08,
+   "latents_s": 1.7709665000147652,
+   "dec_fp32_s": 1.1862632000120357,
+   "dec_int8_s": 1.304298100003507,
+   "fp32_vs_int8_max_abs_diff": 0.0,
+   "time_to_audio_ms_nonstream": 2957.229700026801,
+   "dtype": "float32",
+   "latent_dtype": "float32"
+  }
+ ],
+ "matvec_ms_per_ar_step": {
+  "numpy": 4.432627999922261,
+  "torch": 9.817210000182968,
+  "numpy2": 4.322232999838889,
+  "torch2": 9.553349000052549
+ }
+}

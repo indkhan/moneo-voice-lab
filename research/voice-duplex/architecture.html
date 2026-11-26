@@ -1,0 +1,96 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Voice architecture</title></head><body>
+<style>
+  .wrap{font-family:var(--font-sans);color:var(--foreground);font-size:13px;line-height:1.4}
+  h3{font-size:14px;margin:18px 0 8px}
+  .lane{border:1px solid var(--border);border-radius:var(--radius);padding:10px 12px;margin-bottom:8px;background:var(--card)}
+  .lane>b{display:block;font-size:12px;letter-spacing:.02em;margin-bottom:8px}
+  .lane>b span{font-weight:400;color:var(--muted-foreground)}
+  .row{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch}
+  .box{flex:1 1 104px;border:1px solid var(--border);border-radius:calc(var(--radius) - 2px);padding:6px 8px;background:var(--background)}
+  .box i{display:block;font-style:normal;font-size:11px;color:var(--muted-foreground);margin-top:2px}
+  .arr{align-self:center;color:var(--muted-foreground);flex:0 0 auto}
+  .reflex{border-color:var(--chart-1)} .spec{border-color:var(--chart-3)} .think{border-color:var(--chart-2)}
+  .down{text-align:center;color:var(--muted-foreground);font-size:12px;margin:-2px 0 6px}
+  .gate{border-style:dashed}
+  .tl{display:grid;grid-template-columns:150px 1fr;gap:6px 10px;align-items:center}
+  .track{position:relative;height:22px;background:var(--secondary);border-radius:4px}
+  .seg{position:absolute;top:0;height:22px;border-radius:4px;font-size:11px;line-height:22px;padding-left:4px;white-space:nowrap;overflow:visible}
+  .wait{background:var(--muted)} .ack{background:var(--chart-1);color:var(--background)} .ans{background:var(--chart-2);color:var(--background)}
+  .scale{position:relative;height:16px;font-size:10px;color:var(--muted-foreground)} .scale span{position:absolute;transform:translateX(-50%)}
+  .note{font-size:11px;color:var(--muted-foreground);margin-top:6px}
+  .legend{display:flex;gap:14px;font-size:11px;margin:6px 0 0;flex-wrap:wrap} .legend u{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+</style>
+<div class="wrap">
+  <h3>Option A (recommended): speculative reflex cascade</h3>
+
+  <div class="lane">
+    <b>Browser <span>phone or desktop, one WebSocket or WebRTC link to the laptop</span></b>
+    <div class="row">
+      <div class="box">Microphone<i>always open, also while Moneo talks</i></div><div class="arr">→</div>
+      <div class="box">Echo canceller<i>removes Moneo's own voice (26–32 dB measured)</i></div><div class="arr">→</div>
+      <div class="box">Audio up<i>80 ms frames</i></div>
+      <div class="box">Speaker<i>plays chunks, can duck or stop at once</i></div>
+      <div class="box">Playback position<i>reports what was really heard</i></div>
+    </div>
+  </div>
+  <div class="down">↓ audio &nbsp;&nbsp; ↑ speech chunks</div>
+
+  <div class="lane reflex">
+    <b>Reflex layer <span>on the laptop CPU, tiny models, decides in tens of ms</span></b>
+    <div class="row">
+      <div class="box">Voice activity<i>Silero</i></div><div class="arr">→</div>
+      <div class="box">Speech to text<i>Whistle 17 MB, 74–158 ms, words while you talk</i></div><div class="arr">→</div>
+      <div class="box">Turn check<i>Smart Turn 8 MB, 95%, 26 ms</i></div><div class="arr">→</div>
+      <div class="box">Router<i>TF-IDF 4.6 MB, 0.5 ms: answer myself, hand over, wait, correction</i></div><div class="arr">→</div>
+      <div class="box">Conductor<i>plain code: listen, mm-hm, duck, stop, acknowledge, hand over</i></div>
+    </div>
+    <div class="row" style="margin-top:6px">
+      <div class="box">Self-speech filter<i>ignores words Moneo is saying right now</i></div>
+      <div class="box">Phrase bank<i>ready-made "mm-hm", "one sec" in the chosen voice</i></div>
+      <div class="box">Small-talk talker<i>tiny chat model, 94–236 ms; needs fine-tuning</i></div>
+      <div class="box">Voice<i>streaming Woof 41 MB or Pocket TTS, first sound 70–100 ms</i></div>
+      <div class="box">Number guard<i>speaks amounts exactly as Moneo wrote them</i></div>
+    </div>
+  </div>
+  <div class="down">↓ partial words, route, topic &nbsp;&nbsp; ↑ results</div>
+
+  <div class="lane spec">
+    <b>Early work <span>starts before you finish the sentence, stays private until confirmed</span></b>
+    <div class="row">
+      <div class="box">1. Guess route and topic<i>known about 3 words before the end</i></div><div class="arr">→</div>
+      <div class="box">2. Prepare acknowledgement audio<i>ready in time 11 of 17</i></div><div class="arr">→</div>
+      <div class="box">3. Fetch read-only data<i>goes into a result cache</i></div><div class="arr">→</div>
+      <div class="box">4. Start thinking model<i>at the first 160 ms pause</i></div><div class="arr">→</div>
+      <div class="box gate">Gate<i>final words agree: use it. Otherwise cancel, keep cached reads</i></div>
+    </div>
+    <div class="note">Writes are never started early. They only ever become a card you tap.</div>
+  </div>
+  <div class="down">↓ the request, when confirmed &nbsp;&nbsp; ↑ answer text and cards</div>
+
+  <div class="lane think">
+    <b>Thinking model <span>pluggable, 1.5–2.7 s to first word measured on the ChatGPT plan</span></b>
+    <div class="row">
+      <div class="box">Moneo chat agent with tools<i>the existing /api/chat, unchanged</i></div>
+      <div class="box">ChatGPT sign-in</div><div class="box">Claude sign-in</div><div class="box">API key or OpenRouter</div><div class="box">Local model</div>
+    </div>
+  </div>
+
+  <h3>Measured: time after you stop talking (money requests, median of 17)</h3>
+  <div class="tl">
+    <div>Ours</div>
+    <div class="track"><div class="seg wait" style="left:0;width:19.6%"></div><div class="seg ack" style="left:19.6%;width:66.5%">"let me check…" 509 ms</div><div class="seg ans" style="left:86.1%;width:13.9%">answer 2,238</div></div>
+    <div>Classic pipeline + filler</div>
+    <div class="track"><div class="seg wait" style="left:0;width:29.9%"></div><div class="seg ack" style="left:29.9%;width:66.6%">filler 778 ms</div><div class="seg ans" style="left:96.5%;width:3.5%"></div></div>
+    <div>Classic pipeline</div>
+    <div class="track"><div class="seg wait" style="left:0;width:96.5%">silence until 2,509 ms</div><div class="seg ans" style="left:96.5%;width:3.5%"></div></div>
+    <div>GPT-Live (OpenAI's figure)</div>
+    <div class="track"><div class="seg wait" style="left:0;width:30.7%"></div><div class="seg ack" style="left:30.7%;width:69.3%">first response about 800 ms; answer time not measured</div></div>
+    <div></div>
+    <div class="scale"><span style="left:0">0</span><span style="left:19.2%">500</span><span style="left:38.5%">1,000</span><span style="left:57.7%">1,500</span><span style="left:76.9%">2,000</span><span style="left:96.2%">2,500 ms</span></div>
+  </div>
+  <div class="legend"><span><u style="background:var(--muted)"></u>silence</span><span><u style="background:var(--chart-1)"></u>acknowledgement playing</span><span><u style="background:var(--chart-2)"></u>real answer starts</span></div>
+  <div class="note">26 simulated calls on this laptop with a stand-in thinking model without tools. The slowest tenth of our first reactions took 1.7 s or more. GPT-Live was not run side by side.</div>
+</div>
+
+</body></html>

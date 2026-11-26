@@ -1,0 +1,58 @@
+{
+  "plain": {
+    "n": 30,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 53
+  },
+  "self-correction": {
+    "n": 30,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 67
+  },
+  "follow-up": {
+    "n": 25,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 16
+  },
+  "interruption": {
+    "n": 20,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 12
+  },
+  "compare": {
+    "n": 15,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 51
+  },
+  "count-breakdown": {
+    "n": 10,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 84
+  },
+  "out-of-scope": {
+    "n": 20,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 0
+  },
+  "TOTAL": {
+    "n": 150,
+    "exact %": 100,
+    "wrong answer %": 0,
+    "handed off %": 0,
+    "early card differs %": 54
+  }
+}

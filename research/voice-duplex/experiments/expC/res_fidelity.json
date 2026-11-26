@@ -1,0 +1,110 @@
+{
+ "fid_pocket_english": {
+  "sentences_exact": 27,
+  "of": 30,
+  "numbers_ok": 51,
+  "numbers": 57,
+  "fails": [
+   {
+    "text": "Insurance costs 126 euros every 3 months.",
+    "heard": "The insurance costs 226 euros every three months."
+   },
+   {
+    "text": "Your account ending in 4471 has a balance of 6,012.30 euros.",
+    "heard": "Your account ending in 4471 has a balance of 6,000-12-30 euros."
+   },
+   {
+    "text": "You spent €1,048.76 on rent and utilities in September 2026.",
+    "heard": "You spent thousands of 48-276 on rent and utilities in September 2026."
+   }
+  ]
+ },
+ "fid_pocket_english_18m_2026-10": {
+  "sentences_exact": 20,
+  "of": 30,
+  "numbers_ok": 39,
+  "numbers": 57,
+  "fails": [
+   {
+    "text": "You spent 312.40 euros on groceries in October.",
+    "heard": "You spent 31.40 euros on groceries in October."
+   },
+   {
+    "text": "Your net worth is 48,250 euros.",
+    "heard": "Your network is 48 to 150 euros."
+   },
+   {
+    "text": "You paid €89.99 for the gym membership on January 5th.",
+    "heard": "You paid Eating 9.99 for the gym membership on January 5th."
+   },
+   {
+    "text": "Dining out was 215 euros, down 12 percent from August.",
+    "heard": "Dining out was 2015 euros down 12% from August."
+   },
+   {
+    "text": "You have 17,903.55 euros across 4 accounts.",
+    "heard": "You have 1793.55 euros across four accounts."
+   },
+   {
+    "text": "Insurance costs 126 euros every 3 months.",
+    "heard": "Insurance costs 26 euros every three months."
+   },
+   {
+    "text": "The refund of 14.99 pounds came back on the 30th.",
+    "heard": "The refund of 14.9 pounds came back on the 30th."
+   },
+   {
+    "text": "Your budget for travel is 2,750 euros, and 1,105 is left.",
+    "heard": "Your budget for travel is 2nd, 750 euros, and 1 ton and 5 is left."
+   },
+   {
+    "text": "Your account ending in 4471 has a balance of 6,012.30 euros.",
+    "heard": "Your account, ending in 4471, has a balance of 6,000-12-30 euros."
+   },
+   {
+    "text": "The next payment of 450 euros is due on December 1st.",
+    "heard": "The next payment of 4050 euros is due on December 1st."
+   }
+  ]
+ },
+ "fid_woof_juno": {
+  "sentences_exact": 26,
+  "of": 30,
+  "numbers_ok": 49,
+  "numbers": 57,
+  "fails": [
+   {
+    "text": "Your salary of 3,480 euros arrived on the 28th.",
+    "heard": "Your salary of 3,400 and 80 euros arrived on the 28th."
+   },
+   {
+    "text": "You have 17,903.55 euros across 4 accounts.",
+    "heard": "You have 17,900 and 3.55 euros across four accounts."
+   },
+   {
+    "text": "Your account ending in 4471 has a balance of 6,012.30 euros.",
+    "heard": "Your account ending in 4471 has a balance of 6,000 in 12.30 euros."
+   },
+   {
+    "text": "You spent €1,048.76 on rent and utilities in September 2026.",
+    "heard": "You spent 1,000 and 48 euros and 76 cents on rent and utilities in September 2026."
+   }
+  ]
+ },
+ "fid_woof_mira": {
+  "sentences_exact": 28,
+  "of": 30,
+  "numbers_ok": 54,
+  "numbers": 57,
+  "fails": [
+   {
+    "text": "Dividends paid 23.07 euros in the third quarter.",
+    "heard": "Dividence paid 23.007 euros in the third quarter."
+   },
+   {
+    "text": "Your account ending in 4471 has a balance of 6,012.30 euros.",
+    "heard": "Your account ending in 4471 has a balance of 6,000 and 12.30 euros."
+   }
+  ]
+ }
+}

@@ -1,0 +1,272 @@
+{
+ "tts": [
+  {
+   "voice": "juno",
+   "chars": 39,
+   "audio_s": 3.16,
+   "synth_s": 2.56,
+   "x_realtime": 1.24,
+   "load_s": 0.51
+  },
+  {
+   "voice": "juno",
+   "chars": 38,
+   "audio_s": 2.48,
+   "synth_s": 1.98,
+   "x_realtime": 1.25,
+   "load_s": 0.51
+  },
+  {
+   "voice": "juno",
+   "chars": 85,
+   "audio_s": 8.2,
+   "synth_s": 3.28,
+   "x_realtime": 2.5,
+   "load_s": 0.51
+  },
+  {
+   "voice": "juno",
+   "chars": 58,
+   "audio_s": 6.88,
+   "synth_s": 1.97,
+   "x_realtime": 3.49,
+   "load_s": 0.51
+  },
+  {
+   "voice": "juno",
+   "chars": 63,
+   "audio_s": 5.24,
+   "synth_s": 1.19,
+   "x_realtime": 4.42,
+   "load_s": 0.51
+  },
+  {
+   "voice": "juno",
+   "chars": 87,
+   "audio_s": 7.56,
+   "synth_s": 1.61,
+   "x_realtime": 4.7,
+   "load_s": 0.51
+  },
+  {
+   "voice": "mira",
+   "chars": 39,
+   "audio_s": 5.44,
+   "synth_s": 13.62,
+   "x_realtime": 0.4,
+   "load_s": 0.28
+  },
+  {
+   "voice": "mira",
+   "chars": 38,
+   "audio_s": 3.44,
+   "synth_s": 1.4,
+   "x_realtime": 2.46,
+   "load_s": 0.28
+  },
+  {
+   "voice": "mira",
+   "chars": 85,
+   "audio_s": 10.4,
+   "synth_s": 2.79,
+   "x_realtime": 3.73,
+   "load_s": 0.28
+  },
+  {
+   "voice": "mira",
+   "chars": 58,
+   "audio_s": 8.4,
+   "synth_s": 2.23,
+   "x_realtime": 3.77,
+   "load_s": 0.28
+  },
+  {
+   "voice": "mira",
+   "chars": 63,
+   "audio_s": 6.16,
+   "synth_s": 1.82,
+   "x_realtime": 3.39,
+   "load_s": 0.28
+  },
+  {
+   "voice": "mira",
+   "chars": 87,
+   "audio_s": 8.8,
+   "synth_s": 2.04,
+   "x_realtime": 4.32,
+   "load_s": 0.28
+  }
+ ],
+ "stt": [
+  {
+   "ref": "How much did I spend on groceries last month?",
+   "hyp": "How much did I spend on groceries last month?",
+   "wer": 0.0,
+   "audio_s": 3.16,
+   "wall_ms": 101,
+   "ttft_ms": 43.5,
+   "lang": "en"
+  },
+  {
+   "ref": "By the way I spent twelve forty at Netto and I have eighty euros in cash.",
+   "hyp": "By the way, I spent 1240 at Netto, and I have 80 euros in cash.",
+   "wer": 0.188,
+   "audio_s": 4.96,
+   "wall_ms": 158,
+   "ttft_ms": 70.0,
+   "lang": "en"
+  },
+  {
+   "ref": "No, I meant September, not October.",
+   "hyp": "No, I meant September, not October.",
+   "wer": 0.0,
+   "audio_s": 2.88,
+   "wall_ms": 84,
+   "ttft_ms": 32.4,
+   "lang": "en"
+  },
+  {
+   "ref": "What is my net worth right now and how did it change?",
+   "hyp": "What is my net worth right now, and how did it change?",
+   "wer": 0.0,
+   "audio_s": 3.44,
+   "wall_ms": 104,
+   "ttft_ms": 49.7,
+   "lang": "en"
+  },
+  {
+   "ref": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "hyp": "You spent 312.40 euros on groceries in October. About 18% more than September.",
+   "wer": 0.067,
+   "audio_s": 8.32,
+   "wall_ms": 863,
+   "ttft_ms": 742.8,
+   "lang": "en"
+  },
+  {
+   "ref": "Your net worth is 48,250 euros, up 1,300 since last month.",
+   "hyp": "Your network is 48,250 euros, up 1,300 since last month.",
+   "wer": 0.154,
+   "audio_s": 6.76,
+   "wall_ms": 783,
+   "ttft_ms": 695.8,
+   "lang": "en"
+  }
+ ],
+ "stream": [
+  {
+   "received_s": 0.5,
+   "pass_ms": 29.8,
+   "text": "",
+   "pending": "Cool."
+  },
+  {
+   "received_s": 1.0,
+   "pass_ms": 54.1,
+   "text": "",
+   "pending": "How much did I-"
+  },
+  {
+   "received_s": 1.5,
+   "pass_ms": 103.2,
+   "text": "How much did",
+   "pending": "I spend on Google?"
+  },
+  {
+   "received_s": 2.0,
+   "pass_ms": 103.8,
+   "text": "I spend on",
+   "pending": "groceries?"
+  },
+  {
+   "received_s": 2.5,
+   "pass_ms": 121.7,
+   "text": "",
+   "pending": "groceries last month?"
+  },
+  {
+   "received_s": 3.0,
+   "pass_ms": 153.8,
+   "text": "groceries last month?",
+   "pending": ""
+  },
+  {
+   "received_s": 3.16,
+   "pass_ms": 200.8,
+   "text": "",
+   "pending": ""
+  },
+  {
+   "received_s": 3.16,
+   "pass_ms": 0.0,
+   "text": "",
+   "pending": ""
+  },
+  {
+   "received_s": 0.5,
+   "pass_ms": 53.6,
+   "text": "",
+   "pending": "Bye."
+  },
+  {
+   "received_s": 1.0,
+   "pass_ms": 291.0,
+   "text": "",
+   "pending": "By the way, I start"
+  },
+  {
+   "received_s": 1.5,
+   "pass_ms": 195.5,
+   "text": "By the way, I",
+   "pending": "spent 12."
+  },
+  {
+   "received_s": 2.0,
+   "pass_ms": 254.1,
+   "text": "spent",
+   "pending": "1240 and"
+  },
+  {
+   "received_s": 2.5,
+   "pass_ms": 921.6,
+   "text": "1240",
+   "pending": "at Netto."
+  },
+  {
+   "received_s": 3.0,
+   "pass_ms": 539.9,
+   "text": "at",
+   "pending": "Netto, and I have"
+  },
+  {
+   "received_s": 3.5,
+   "pass_ms": 413.9,
+   "text": "Netto, and I have",
+   "pending": "88."
+  },
+  {
+   "received_s": 4.0,
+   "pass_ms": 703.5,
+   "text": "",
+   "pending": "80 euros in"
+  },
+  {
+   "received_s": 4.5,
+   "pass_ms": 389.7,
+   "text": "80 euros in",
+   "pending": "cash."
+  },
+  {
+   "received_s": 4.96,
+   "pass_ms": 388.6,
+   "text": "cash.",
+   "pending": ""
+  },
+  {
+   "received_s": 4.96,
+   "pass_ms": 0.0,
+   "text": "",
+   "pending": ""
+  }
+ ]
+}

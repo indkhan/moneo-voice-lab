@@ -1,0 +1,17 @@
+{
+  "2000 rows": {
+    "median ms": 4.1,
+    "p95 ms": 8.9,
+    "max ms": 25.3
+  },
+  "20000 rows": {
+    "median ms": 33,
+    "p95 ms": 95.4,
+    "max ms": 109
+  },
+  "100000 rows": {
+    "median ms": 175.7,
+    "p95 ms": 505.3,
+    "max ms": 552.9
+  }
+}

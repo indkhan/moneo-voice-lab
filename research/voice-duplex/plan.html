@@ -1,0 +1,110 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>Live-query call: plan and tests</title></head><body>
+<style>
+  .w{font-family:var(--font-sans);color:var(--foreground);font-size:13px;line-height:1.35}
+  h3{font-size:14px;margin:24px 0 10px} h3:first-child{margin-top:4px}
+  .mut{color:var(--muted-foreground)} .sm{font-size:11px}
+  .flow{display:flex;flex-wrap:wrap;gap:6px;align-items:stretch}
+  .n{flex:1 1 96px;border:1px solid var(--border);border-radius:var(--radius);padding:8px;background:var(--card);text-align:center}
+  .n b{display:block} .n span{display:block;font-size:11px;color:var(--muted-foreground);margin-top:2px}
+  .a{align-self:center;color:var(--muted-foreground)}
+  .hot{border-color:var(--chart-1)} .code{border-color:var(--chart-2)} .big{border-color:var(--chart-3);border-style:dashed}
+  .done{border-color:var(--chart-2);border-width:2px}
+  .two{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+  .box{border:1px solid var(--border);border-radius:var(--radius);padding:9px;background:var(--card)}
+  .box>b{display:block;margin-bottom:6px}
+  .x{text-decoration:line-through;color:var(--muted-foreground)}
+  .say{font-size:13px;line-height:2}
+  .say span{padding:2px 5px;border-radius:4px;margin-right:2px;white-space:nowrap}
+  .ok{background:var(--chart-2);color:var(--background)} .skip{background:var(--secondary);color:var(--muted-foreground)} .bad{background:var(--destructive);color:var(--background)}
+  .loop{display:grid;grid-template-columns:1fr 18px 1fr 18px 1fr 18px 1fr;gap:4px;align-items:center}
+  .loop .n{flex:none}
+  .back{margin-top:6px;border:1px dashed var(--border);border-radius:var(--radius);padding:6px 8px;text-align:center;font-size:11px;color:var(--muted-foreground)}
+  .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:6px}
+  .s{border:1px solid var(--border);border-radius:var(--radius);padding:8px;background:var(--card)}
+  .s em{font-style:normal;display:inline-block;width:20px;height:20px;line-height:20px;text-align:center;border-radius:50%;background:var(--chart-1);color:var(--background);font-size:11px;margin-bottom:4px}
+  .s.done em{background:var(--chart-2)}
+  .s b{display:block} .s span{display:block;font-size:11px;color:var(--muted-foreground);margin-top:2px}
+  .s i{display:block;font-style:normal;font-size:11px;margin-top:6px;padding-top:5px;border-top:1px dashed var(--border)}
+  .bars{display:grid;grid-template-columns:150px 1fr 44px;gap:5px 8px;align-items:center;font-size:12px}
+  .bar{height:16px;border-radius:4px;background:var(--secondary);position:relative;overflow:hidden}
+  .bar u{position:absolute;left:0;top:0;bottom:0;background:var(--chart-2)} .bar s{position:absolute;top:0;bottom:0;background:var(--destructive)}
+  .leg{display:flex;gap:12px;font-size:11px;color:var(--muted-foreground);margin-top:6px}
+  .leg i{display:inline-block;width:10px;height:10px;border-radius:2px;margin-right:4px;vertical-align:-1px}
+  @media(max-width:640px){.steps{grid-template-columns:repeat(2,1fr)}.two{grid-template-columns:1fr}.loop{grid-template-columns:1fr}.loop .a{display:none}}
+</style>
+<div class="w">
+
+<h3>1 · What the audit changed</h3>
+<div class="two">
+  <div class="box"><b>Before</b>
+    <div class="x">Invent a new query language</div>
+    <div class="x">Call replaces the chat model</div>
+    <div class="x">Start with speech and ears</div>
+    <div class="x">"Nobody has done any of this"</div>
+  </div>
+  <div class="box hot"><b>Now</b>
+    <div>Reuse Moneo's own query (<span class="mut">investigate</span>)</div>
+    <div>Fast path first, chat model as fallback</div>
+    <div>Start with text, inside today's call</div>
+    <div>One new claim, proven by tests</div>
+  </div>
+</div>
+
+<h3>2 · One turn</h3>
+<div class="flow">
+  <div class="n"><b>Words</b><span>arrive one by one</span></div><div class="a">→</div>
+  <div class="n hot"><b>Editor</b><span>0.1 ms per word</span></div><div class="a">→</div>
+  <div class="n hot"><b>Question card</b><span>what · where · when</span></div><div class="a">→</div>
+  <div class="n"><b>Every word explained?</b><span>the safety check</span></div>
+</div>
+<div class="two" style="margin-top:6px">
+  <div class="box code"><b>Yes → code answers</b><span class="mut sm">Moneo's own maths on rows in memory · 33 ms · number spoken last</span></div>
+  <div class="box big"><b>No → chat model answers</b><span class="mut sm">same as today · nothing lost · all writes go here and stay cards you tap</span></div>
+</div>
+
+<h3>3 · The safety check</h3>
+<div class="box">
+  <div class="say"><span class="skip">how much did I</span><span class="ok">spend</span><span class="skip">on</span><span class="ok">groceries</span><span class="ok">last month</span><span class="skip">no wait</span><span class="ok">this month</span> <b>→ code answers</b></div>
+  <div class="say"><span class="skip">how much did I</span><span class="ok">spend</span><span class="skip">on</span><span class="ok">groceries</span><span class="bad">excluding</span><span class="skip">the trip to</span><span class="bad">Rome</span> <b>→ chat model</b></div>
+  <div class="say"><span class="skip">how much is in my</span><span class="ok">Revolut</span><span class="bad">no money verb</span> <b>→ chat model</b></div>
+  <div class="leg"><span><i style="background:var(--chart-2)"></i>fills the card</span><span><i style="background:var(--secondary)"></i>harmless</span><span><i style="background:var(--destructive)"></i>unexplained: never guess</span></div>
+</div>
+
+<h3>4 · The loop for every step</h3>
+<div class="loop">
+  <div class="n"><b>Build</b><span>one small piece</span></div><div class="a">→</div>
+  <div class="n hot"><b>Blind test</b><span>cases the code never saw</span></div><div class="a">→</div>
+  <div class="n"><b>Gate</b><span>a number to reach</span></div><div class="a">→</div>
+  <div class="n code"><b>Next step</b><span>only when it passes</span></div>
+</div>
+<div class="back">↺ fails → fix → fresh blind test (old one is used up) · every result goes in LOG.md</div>
+
+<h3>5 · Steps and their gates</h3>
+<div class="steps">
+  <div class="s done"><em>1</em><b>Card, editor, speech</b><span>done today</span><i>88% right · 3% wrong on first try</i></div>
+  <div class="s done"><em>2</em><b>Fast path in today's call</b><span>built · code answers in 0.3–0.6 s</span><i>Gate still open: covers 35%+ of your real questions (no history yet)</i></div>
+  <div class="s"><em>3</em><b>More card kinds</b><span>balances, net worth, budget</span><i>Gate: coverage up, wrong ≤ 2%</i></div>
+  <div class="s"><em>4</em><b>Ears</b><span>real mic, hears itself</span><i>Gate: 90% of interruptions in 0.4 s</i></div>
+  <div class="s"><em>5</em><b>Local voice</b><span>Whistle in, Pocket/Woof out</span><i>Gate: first sound &lt; 0.5 s</i></div>
+  <div class="s"><em>6</em><b>Change mid-sentence</b><span>+ number check before playing</span><i>Gate: listeners prefer it</i></div>
+  <div class="s"><em>7</em><b>Learned editor</b><span>small trained model</span><i>Gate: beats the rules</i></div>
+  <div class="s"><em>8</em><b>Score vs GPT-Live</b><span>same script, public benchmarks</span><i>Gate: better on corrections</i></div>
+</div>
+
+<h3>6 · Step 1 results</h3>
+<div class="bars">
+  <span>First try, set 1</span><div class="bar"><u style="width:76%"></u><s style="left:76%;width:3%"></s></div><span>76%</span>
+  <span>First try, other half</span><div class="bar"><u style="width:82%"></u><s style="left:82%;width:9%"></s></div><span>82%</span>
+  <span><b>First try, new set</b></span><div class="bar"><u style="width:88%"></u><s style="left:88%;width:3%"></s></div><span><b>88%</b></span>
+  <span class="mut">After tuning on them</span><div class="bar"><u style="width:99%"></u></div><span class="mut">99%</span>
+</div>
+<div class="leg"><span><i style="background:var(--chart-2)"></i>right card</span><span><i style="background:var(--destructive)"></i>wrong answer</span><span><i style="background:var(--secondary)"></i>handed to chat model (safe)</span><span>· 80 of 80 out-of-scope questions refused after tuning</span></div>
+
+<h3>7 · What I need from you</h3>
+<div class="two">
+  <div class="box"><b>Your real questions</b><span class="mut sm">To measure how much the fast path covers. I may not touch your own data without a yes.</span></div>
+  <div class="box"><b>About 12 listeners, later</b><span class="mut sm">For step 6: which sounds better, changing mid-sentence or restarting.</span></div>
+</div>
+</div>
+</body></html>

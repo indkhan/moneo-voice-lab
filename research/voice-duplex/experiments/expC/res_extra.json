@@ -1,0 +1,453 @@
+{
+ "threads": "2",
+ "fast_elu": {
+  "orig": {
+   "dec_ms_per_frame": 14.027290496798088,
+   "speech_ms_per_frame": 13.533975054227854,
+   "rtf_rest": 1.516522695135813,
+   "ttfa_ms": 152.95899999910034
+  },
+  "fast": {
+   "dec_ms_per_frame": 11.165843225441186,
+   "speech_ms_per_frame": 13.510329528679435,
+   "rtf_rest": 1.6243569754841436,
+   "ttfa_ms": 150.43434998369776
+  },
+  "waveform_diff_vs_original_elu": [
+   {
+    "same_length": true,
+    "max_abs_diff": 1.1920928955078125e-07,
+    "mean_abs_diff": 5.3527471344239075e-09,
+    "snr_db": 133.0185303653971
+   },
+   {
+    "same_length": true,
+    "max_abs_diff": 1.6391277313232422e-07,
+    "mean_abs_diff": 5.397266633622166e-09,
+    "snr_db": 132.75718012099696
+   },
+   {
+    "same_length": true,
+    "max_abs_diff": 1.4901161193847656e-07,
+    "mean_abs_diff": 5.273650405257513e-09,
+    "snr_db": 132.7224998623218
+   },
+   {
+    "same_length": true,
+    "max_abs_diff": 1.0617077350616455e-07,
+    "mean_abs_diff": 5.36467670286811e-09,
+    "snr_db": 132.94420027423607
+   },
+   {
+    "same_length": true,
+    "max_abs_diff": 1.341104507446289e-07,
+    "mean_abs_diff": 5.6779234647308385e-09,
+    "snr_db": 133.12870783393404
+   },
+   {
+    "same_length": true,
+    "max_abs_diff": 1.341104507446289e-07,
+    "mean_abs_diff": 5.709749117954743e-09,
+    "snr_db": 132.97172511486824
+   },
+   {
+    "same_length": true,
+    "max_abs_diff": 1.862645149230957e-07,
+    "mean_abs_diff": 5.654971158008948e-09,
+    "snr_db": 132.8805974084884
+   },
+   {
+    "same_length": true,
+    "max_abs_diff": 1.825392246246338e-07,
+    "mean_abs_diff": 5.672656566702017e-09,
+    "snr_db": 132.76680754265013
+   }
+  ]
+ },
+ "guard": [
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 0,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 1,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 2,
+   "unguarded_s": 1.0,
+   "guarded_s": 1.0,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 3,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 4,
+   "unguarded_s": 1.12,
+   "guarded_s": 1.12,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 5,
+   "unguarded_s": 1.68,
+   "guarded_s": 1.56,
+   "guard": "runaway"
+  },
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 6,
+   "unguarded_s": 1.0,
+   "guarded_s": 1.0,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Mm-hm.",
+   "seed": 7,
+   "unguarded_s": 1.0,
+   "guarded_s": 1.0,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 0,
+   "unguarded_s": 1.0,
+   "guarded_s": 1.0,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 1,
+   "unguarded_s": 1.0,
+   "guarded_s": 1.0,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 2,
+   "unguarded_s": 1.0,
+   "guarded_s": 1.0,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 3,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 4,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 5,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 6,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Ok.",
+   "seed": 7,
+   "unguarded_s": 1.04,
+   "guarded_s": 1.04,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Sure, one moment.",
+   "seed": 0,
+   "unguarded_s": 1.68,
+   "guarded_s": 1.68,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Sure, one moment.",
+   "seed": 1,
+   "unguarded_s": 1.68,
+   "guarded_s": 1.68,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Sure, one moment.",
+   "seed": 2,
+   "unguarded_s": 1.68,
+   "guarded_s": 1.68,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "Sure, one moment.",
+   "seed": 3,
+   "unguarded_s": 1.6,
+   "guarded_s": 1.6,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 0,
+   "unguarded_s": 8.56,
+   "guarded_s": 8.56,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 1,
+   "unguarded_s": 8.2,
+   "guarded_s": 8.2,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 2,
+   "unguarded_s": 8.16,
+   "guarded_s": 8.16,
+   "guard": null
+  },
+  {
+   "voice": "juno",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 3,
+   "unguarded_s": 8.32,
+   "guarded_s": 8.32,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 0,
+   "unguarded_s": 1.52,
+   "guarded_s": 0.92,
+   "guard": "stall"
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 1,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 2,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 3,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.08,
+   "guard": "stall"
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 4,
+   "unguarded_s": 1.52,
+   "guarded_s": 1.52,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 5,
+   "unguarded_s": 30.0,
+   "guarded_s": 1.08,
+   "guard": "stall"
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 6,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.08,
+   "guard": "stall"
+  },
+  {
+   "voice": "mira",
+   "text": "Mm-hm.",
+   "seed": 7,
+   "unguarded_s": 6.12,
+   "guarded_s": 1.08,
+   "guard": "stall"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 0,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 1,
+   "unguarded_s": 1.36,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 2,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 3,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 4,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 5,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 6,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Ok.",
+   "seed": 7,
+   "unguarded_s": 1.28,
+   "guarded_s": 1.28,
+   "guard": "runaway"
+  },
+  {
+   "voice": "mira",
+   "text": "Sure, one moment.",
+   "seed": 0,
+   "unguarded_s": 2.24,
+   "guarded_s": 2.24,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "Sure, one moment.",
+   "seed": 1,
+   "unguarded_s": 2.56,
+   "guarded_s": 2.56,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "Sure, one moment.",
+   "seed": 2,
+   "unguarded_s": 2.72,
+   "guarded_s": 1.24,
+   "guard": "stall"
+  },
+  {
+   "voice": "mira",
+   "text": "Sure, one moment.",
+   "seed": 3,
+   "unguarded_s": 2.56,
+   "guarded_s": 2.56,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 0,
+   "unguarded_s": 10.08,
+   "guarded_s": 10.08,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 1,
+   "unguarded_s": 10.4,
+   "guarded_s": 10.4,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 2,
+   "unguarded_s": 10.0,
+   "guarded_s": 10.0,
+   "guard": null
+  },
+  {
+   "voice": "mira",
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "seed": 3,
+   "unguarded_s": 36.48,
+   "guarded_s": 8.84,
+   "guard": "stall"
+  }
+ ]
+}

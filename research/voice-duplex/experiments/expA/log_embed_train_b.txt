@@ -1,0 +1,8 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+train shard 9: 774 eng clips, dl 90s, total 639s, embed median 646.4 ms, 151.14 ms/s audio
+train shard 10: 758 eng clips, dl 94s, total 654s, embed median 719.7 ms, 156.58 ms/s audio
+train shard 11: 751 eng clips, dl 68s, total 589s, embed median 695.9 ms, 147.46 ms/s audio
+train shard 12: 770 eng clips, dl 145s, total 686s, embed median 682.5 ms, 148.78 ms/s audio
+train shard 13: 802 eng clips, dl 124s, total 673s, embed median 664.2 ms, 144.01 ms/s audio
+train shard 14: 787 eng clips, dl 137s, total 696s, embed median 660.9 ms, 151.39 ms/s audio
+train shard 15: 796 eng clips, dl 129s, total 707s, embed median 688.1 ms, 155.16 ms/s audio

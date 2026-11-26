@@ -1,0 +1,35 @@
+{
+ "n": 1583,
+ "smart_turn_v3.2": {
+  "acc": 0.9501,
+  "false_cutoff": 0.0635,
+  "missed_end": 0.0359
+ },
+ "smart_turn_ms_median": 20.3705997467041,
+ "smart_turn_feature_ms_median": 5.596099853515625,
+ "test_linear_mean": {
+  "acc": 0.8749,
+  "false_cutoff": 0.1669,
+  "missed_end": 0.0821
+ },
+ "test_linear_last": {
+  "acc": 0.9046,
+  "false_cutoff": 0.1158,
+  "missed_end": 0.0744
+ },
+ "test_linear_last5": {
+  "acc": 0.8913,
+  "false_cutoff": 0.1295,
+  "missed_end": 0.0872
+ },
+ "test_linear_mean+last+last5": {
+  "acc": 0.9274,
+  "false_cutoff": 0.0934,
+  "missed_end": 0.0513
+ },
+ "test_gru_25": {
+  "acc": 0.9185,
+  "false_cutoff": 0.1021,
+  "missed_end": 0.0603
+ }
+}

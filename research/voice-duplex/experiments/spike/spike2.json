@@ -1,0 +1,151 @@
+{
+ "tts": [
+  {
+   "model": "english_18m_2026-10",
+   "quant": false,
+   "first_audio_ms": 83,
+   "audio_s": 2.08,
+   "x_realtime": 3.03,
+   "load_s": 6.2,
+   "voice_s": 1.43
+  },
+  {
+   "model": "english_18m_2026-10",
+   "quant": false,
+   "first_audio_ms": 85,
+   "audio_s": 5.68,
+   "x_realtime": 2.99,
+   "load_s": 6.2,
+   "voice_s": 1.43
+  },
+  {
+   "model": "english_18m_2026-10",
+   "quant": false,
+   "first_audio_ms": 76,
+   "audio_s": 1.04,
+   "x_realtime": 2.68,
+   "load_s": 6.2,
+   "voice_s": 1.43
+  },
+  {
+   "model": "english_7m_2026-10",
+   "quant": false,
+   "first_audio_ms": 74,
+   "audio_s": 2.32,
+   "x_realtime": 3.26,
+   "load_s": 3.3,
+   "voice_s": 1.7
+  },
+  {
+   "model": "english_7m_2026-10",
+   "quant": false,
+   "first_audio_ms": 70,
+   "audio_s": 6.16,
+   "x_realtime": 3.57,
+   "load_s": 3.3,
+   "voice_s": 1.7
+  },
+  {
+   "model": "english_7m_2026-10",
+   "quant": false,
+   "first_audio_ms": 53,
+   "audio_s": 1.68,
+   "x_realtime": 3.76,
+   "load_s": 3.3,
+   "voice_s": 1.7
+  },
+  {
+   "model": "english",
+   "quant": true,
+   "first_audio_ms": 68,
+   "audio_s": 2.16,
+   "x_realtime": 3.28,
+   "load_s": 8.9,
+   "voice_s": 1.31
+  },
+  {
+   "model": "english",
+   "quant": true,
+   "first_audio_ms": 127,
+   "audio_s": 6.0,
+   "x_realtime": 3.18,
+   "load_s": 8.9,
+   "voice_s": 1.31
+  },
+  {
+   "model": "english",
+   "quant": true,
+   "first_audio_ms": 75,
+   "audio_s": 0.96,
+   "x_realtime": 2.86,
+   "load_s": 8.9,
+   "voice_s": 1.31
+  },
+  {
+   "model": "german",
+   "quant": true,
+   "first_audio_ms": 66,
+   "audio_s": 3.44,
+   "x_realtime": 3.7,
+   "load_s": 8.1,
+   "voice_s": 1.62
+  },
+  {
+   "model": "german",
+   "quant": true,
+   "first_audio_ms": 101,
+   "audio_s": 5.36,
+   "x_realtime": 3.43,
+   "load_s": 8.1,
+   "voice_s": 1.62
+  },
+  {
+   "model": "german",
+   "quant": true,
+   "first_audio_ms": 80,
+   "audio_s": 3.2,
+   "x_realtime": 3.08,
+   "load_s": 8.1,
+   "voice_s": 1.62
+  },
+  {
+   "model": "german",
+   "quant": true,
+   "first_audio_ms": 70,
+   "audio_s": 3.68,
+   "x_realtime": 3.32,
+   "load_s": 8.1,
+   "voice_s": 1.62
+  }
+ ],
+ "stt_de": [
+  {
+   "ref": "Wie viel habe ich letzten Monat für Lebensmittel ausgegeben?",
+   "hyp": "Wie viel habe ich letzten Monat für Lebensmittel ausgegeben?",
+   "lang": "de",
+   "audio_s": 3.44,
+   "wall_ms": 179
+  },
+  {
+   "ref": "Übrigens habe ich zwölf Euro vierzig bei Netto ausgegeben und ich habe achtzig Euro in bar.",
+   "hyp": "Übrigens habe ich 12 Euro 40 bei Netto ausgegeben und ich habe 80 Euro in Bahn.",
+   "lang": "de",
+   "audio_s": 5.36,
+   "wall_ms": 792
+  },
+  {
+   "ref": "Nein, ich meinte September, nicht Oktober.",
+   "hyp": "Nein, ich meinte September nicht Oktober.",
+   "lang": "de",
+   "audio_s": 3.2,
+   "wall_ms": 163
+  },
+  {
+   "ref": "Wie hoch ist mein Vermögen gerade und wie hat es sich verändert?",
+   "hyp": "Wie hoch ist mein Vermögen gerade und wie hat es sich verändert?",
+   "lang": "de",
+   "audio_s": 3.68,
+   "wall_ms": 259
+  }
+ ]
+}

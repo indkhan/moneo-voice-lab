@@ -1,0 +1,5 @@
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+test shard 6: 788 eng clips, dl 111s, total 691s, embed median 664.5 ms, 156.99 ms/s audio
+test shard 7: 778 eng clips, dl 87s, total 672s, embed median 720.1 ms, 159.71 ms/s audio
+test shard 8: 789 eng clips, dl 76s, total 605s, embed median 678.6 ms, 143.11 ms/s audio
+test shard 9: 754 eng clips, dl 94s, total 616s, embed median 678.3 ms, 146.76 ms/s audio

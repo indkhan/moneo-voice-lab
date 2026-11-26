@@ -14,4 +14,6 @@ The lab gives voice experiments their own development cycle. [Moneo](https://git
 
 ## Status
 
-This repository is at the research setup stage. A runnable demo and benchmark results are planned.
+The [research log](research/voice-duplex/LOG.md) records model evaluations, benchmark results, and design decisions. The [roadmap](research/voice-duplex/ROADMAP.md) and [experiments](research/voice-duplex/experiments/) were imported from Moneo at commit `7911afae`. The import also includes the in-progress Sherpa-ONNX benchmark from that checkout.
+
+Some scripts require Moneo's QA environment, model downloads, or local audio inputs. The repository includes benchmark results and text from test sessions. Voice recordings are kept outside the repository.

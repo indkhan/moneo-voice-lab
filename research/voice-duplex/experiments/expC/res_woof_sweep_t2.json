@@ -1,0 +1,132 @@
+{
+ "threads": "2",
+ "mode": "sweep",
+ "load_s": 0.6000279999861959,
+ "first_call_s": 1.171661900007166,
+ "chunking": [
+  {
+   "schedule": [
+    1,
+    1
+   ],
+   "ttfa_ms_median": 87.42585001164116,
+   "ttfa_ms_max": 126.32979999762028,
+   "rtf_rest_median": 2.0954582850652095,
+   "underruns_total": 0,
+   "needed_prebuffer_ms_max": 0.0,
+   "speech_ms_per_frame": 9.126605643917086,
+   "dec_ms_per_frame": 10.759243028967143
+  },
+  {
+   "schedule": [
+    1,
+    4
+   ],
+   "ttfa_ms_median": 84.13405001920182,
+   "ttfa_ms_max": 124.47730000712909,
+   "rtf_rest_median": 2.482848183122144,
+   "underruns_total": 6,
+   "needed_prebuffer_ms_max": 22.61729999096132,
+   "speech_ms_per_frame": 8.549982407510186,
+   "dec_ms_per_frame": 8.110299686282145
+  },
+  {
+   "schedule": [
+    2,
+    4
+   ],
+   "ttfa_ms_median": 119.28344999614637,
+   "ttfa_ms_max": 139.68860000022687,
+   "rtf_rest_median": 2.3510413925352616,
+   "underruns_total": 0,
+   "needed_prebuffer_ms_max": 0.0,
+   "speech_ms_per_frame": 9.116618628881863,
+   "dec_ms_per_frame": 8.848802141592863
+  },
+  {
+   "schedule": [
+    1,
+    2,
+    4
+   ],
+   "ttfa_ms_median": 92.21925000019837,
+   "ttfa_ms_max": 124.16730000404641,
+   "rtf_rest_median": 2.332026987857505,
+   "underruns_total": 2,
+   "needed_prebuffer_ms_max": 1.1041999759618115,
+   "speech_ms_per_frame": 8.995242199720284,
+   "dec_ms_per_frame": 8.824487934780187
+  },
+  {
+   "schedule": [
+    1,
+    2,
+    4,
+    8
+   ],
+   "ttfa_ms_median": 95.45204999449197,
+   "ttfa_ms_max": 127.15749998460524,
+   "rtf_rest_median": 2.4806667794032378,
+   "underruns_total": 1,
+   "needed_prebuffer_ms_max": 2.852399987168602,
+   "speech_ms_per_frame": 8.97421320435388,
+   "dec_ms_per_frame": 7.712955877391295
+  },
+  {
+   "schedule": [
+    4,
+    4
+   ],
+   "ttfa_ms_median": 145.26335000118706,
+   "ttfa_ms_max": 172.5766999879852,
+   "rtf_rest_median": 2.239181117249151,
+   "underruns_total": 0,
+   "needed_prebuffer_ms_max": 0.0,
+   "speech_ms_per_frame": 9.408678206667176,
+   "dec_ms_per_frame": 9.152726612932561
+  },
+  {
+   "schedule": [
+    8,
+    8
+   ],
+   "ttfa_ms_median": 263.79505000659265,
+   "ttfa_ms_max": 345.67239999887533,
+   "rtf_rest_median": 1.8313230160341036,
+   "underruns_total": 0,
+   "needed_prebuffer_ms_max": 0.0,
+   "speech_ms_per_frame": 13.860384443768186,
+   "dec_ms_per_frame": 9.40940018881136
+  }
+ ],
+ "whole_sentence": [
+  {
+   "text": "Let me look through your transactions.",
+   "audio_s_last": 2.48,
+   "latents_s": 0.5654895000043325,
+   "dec_fp32_s": 0.37471720000030473,
+   "dec_int8_s": 0.6106120999902487,
+   "fp32_vs_int8_max_abs_diff": 0.0,
+   "time_to_audio_ms_nonstream": 940.2067000046372,
+   "dtype": "float32",
+   "latent_dtype": "float32"
+  },
+  {
+   "text": "You spent 312.40 euros on groceries in October, about 18 percent more than September.",
+   "audio_s_last": 8.08,
+   "latents_s": 1.9147290000109933,
+   "dec_fp32_s": 1.26875079999445,
+   "dec_int8_s": 1.3662599000090268,
+   "fp32_vs_int8_max_abs_diff": 0.0,
+   "time_to_audio_ms_nonstream": 3183.4798000054434,
+   "dtype": "float32",
+   "latent_dtype": "float32"
+  }
+ ],
+ "matvec_ms_per_ar_step": {
+  "numpy": 6.422221999964677,
+  "torch": 9.698031999869272,
+  "numpy2": 5.476780000026338,
+  "torch2": 9.271109999972396
+ }
+}

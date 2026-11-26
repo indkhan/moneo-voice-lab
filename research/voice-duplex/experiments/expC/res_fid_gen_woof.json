@@ -1,0 +1,486 @@
+{
+ "fid_woof_juno": [
+  {
+   "i": 0,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\00.wav",
+   "spoken_form": "You spent three hundred and twelve point four zero euros on groceries in October.",
+   "aborted": null,
+   "audio_s": 5.2,
+   "gen_s": 13.869753599981777
+  },
+  {
+   "i": 1,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\01.wav",
+   "spoken_form": "Rent of nine hundred and fifty goes out on the third.",
+   "aborted": null,
+   "audio_s": 3.32,
+   "gen_s": 9.187493800010998
+  },
+  {
+   "i": 2,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\02.wav",
+   "spoken_form": "Your portfolio is up two point four percent since March twelfth.",
+   "aborted": null,
+   "audio_s": 4.36,
+   "gen_s": 10.174416299996665
+  },
+  {
+   "i": 3,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\03.wav",
+   "spoken_form": "Your net worth is forty eight thousand two hundred and fifty euros.",
+   "aborted": null,
+   "audio_s": 4.04,
+   "gen_s": 9.55975600000238
+  },
+  {
+   "i": 4,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\04.wav",
+   "spoken_form": "You paid eighty nine euros and ninety nine cents for the gym membership on January fifth.",
+   "aborted": null,
+   "audio_s": 6.08,
+   "gen_s": 16.124625299999025
+  },
+  {
+   "i": 5,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\05.wav",
+   "spoken_form": "Savings grew by one thousand two hundred euros, which is seven point five percent more than last year.",
+   "aborted": null,
+   "audio_s": 6.48,
+   "gen_s": 14.846870599983959
+  },
+  {
+   "i": 6,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\06.wav",
+   "spoken_form": "The electricity bill was sixty four point one eight euros, due on the twenty first.",
+   "aborted": null,
+   "audio_s": 5.36,
+   "gen_s": 9.535757700010436
+  },
+  {
+   "i": 7,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\07.wav",
+   "spoken_form": "You have three subscriptions costing forty one point nine seven euros a month.",
+   "aborted": null,
+   "audio_s": 5.0,
+   "gen_s": 10.901594900002237
+  },
+  {
+   "i": 8,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\08.wav",
+   "spoken_form": "Your salary of three thousand four hundred and eighty euros arrived on the twenty eighth.",
+   "aborted": "stall",
+   "audio_s": 5.4,
+   "gen_s": 6.190905299998121
+  },
+  {
+   "i": 9,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\09.wav",
+   "spoken_form": "Dining out was two hundred and fifteen euros, down twelve percent from August.",
+   "aborted": null,
+   "audio_s": 5.08,
+   "gen_s": 3.555862299981527
+  },
+  {
+   "i": 10,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\10.wav",
+   "spoken_form": "The transfer of one thousand five hundred dollars to savings is scheduled for the fifteenth of November.",
+   "aborted": null,
+   "audio_s": 6.56,
+   "gen_s": 4.499403400026495
+  },
+  {
+   "i": 11,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\11.wav",
+   "spoken_form": "Your ETF gained zero point eight percent today.",
+   "aborted": null,
+   "audio_s": 3.4,
+   "gen_s": 2.6908731999865267
+  },
+  {
+   "i": 12,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\12.wav",
+   "spoken_form": "You have seventeen thousand nine hundred and three point five five euros across four accounts.",
+   "aborted": null,
+   "audio_s": 6.04,
+   "gen_s": 4.845442300022114
+  },
+  {
+   "i": 13,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\13.wav",
+   "spoken_form": "Insurance costs one hundred and twenty six euros every three months.",
+   "aborted": null,
+   "audio_s": 4.68,
+   "gen_s": 4.61336669998127
+  },
+  {
+   "i": 14,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\14.wav",
+   "spoken_form": "On the second of November twenty twenty six you paid thirty nine euros to Spotify.",
+   "aborted": null,
+   "audio_s": 5.6,
+   "gen_s": 3.959293299994897
+  },
+  {
+   "i": 15,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\15.wav",
+   "spoken_form": "Groceries averaged seventy eight point five zero euros per week over six weeks.",
+   "aborted": null,
+   "audio_s": 5.32,
+   "gen_s": 3.719441499997629
+  },
+  {
+   "i": 16,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\16.wav",
+   "spoken_form": "Your mortgage rate is three point six five percent until twenty thirty one.",
+   "aborted": null,
+   "audio_s": 5.0,
+   "gen_s": 3.5775987000088207
+  },
+  {
+   "i": 17,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\17.wav",
+   "spoken_form": "You withdrew two hundred euros in cash on October ninth.",
+   "aborted": "stall",
+   "audio_s": 3.64,
+   "gen_s": 3.024122399976477
+  },
+  {
+   "i": 18,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\18.wav",
+   "spoken_form": "The refund of fourteen point nine nine pounds came back on the thirtieth.",
+   "aborted": "stall",
+   "audio_s": 4.6,
+   "gen_s": 3.7840945000061765
+  },
+  {
+   "i": 19,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\19.wav",
+   "spoken_form": "Your budget for travel is two thousand seven hundred and fifty euros, and one thousand one hundred and five is left.",
+   "aborted": null,
+   "audio_s": 7.08,
+   "gen_s": 5.5496514000114985
+  },
+  {
+   "i": 20,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\20.wav",
+   "spoken_form": "Dividends paid twenty three point zero seven euros in the third quarter.",
+   "aborted": null,
+   "audio_s": 5.0,
+   "gen_s": 3.4290111000009347
+  },
+  {
+   "i": 21,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\21.wav",
+   "spoken_form": "You are thirty five percent of the way to your goal of twenty thousand euros.",
+   "aborted": null,
+   "audio_s": 4.76,
+   "gen_s": 3.4526366999780294
+  },
+  {
+   "i": 22,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\22.wav",
+   "spoken_form": "The phone bill went from twenty nine to thirty four euros in June.",
+   "aborted": null,
+   "audio_s": 4.2,
+   "gen_s": 2.628245200001402
+  },
+  {
+   "i": 23,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\23.wav",
+   "spoken_form": "Your account ending in four four seven one has a balance of six thousand and twelve point three zero euros.",
+   "aborted": null,
+   "audio_s": 7.08,
+   "gen_s": 4.741720999998506
+  },
+  {
+   "i": 24,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\24.wav",
+   "spoken_form": "Tax of nineteen percent adds fifty seven euros to the invoice.",
+   "aborted": null,
+   "audio_s": 4.4,
+   "gen_s": 3.2205773000023328
+  },
+  {
+   "i": 25,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\25.wav",
+   "spoken_form": "You spent one thousand and forty eight euros and seventy six cents on rent and utilities in September twenty twenty six.",
+   "aborted": null,
+   "audio_s": 8.16,
+   "gen_s": 5.471389300015289
+  },
+  {
+   "i": 26,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\26.wav",
+   "spoken_form": "Interest earned this year is three hundred and ten point zero five euros at two point two five percent.",
+   "aborted": null,
+   "audio_s": 6.88,
+   "gen_s": 4.687375299981795
+  },
+  {
+   "i": 27,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\27.wav",
+   "spoken_form": "The next payment of four hundred and fifty euros is due on December first.",
+   "aborted": null,
+   "audio_s": 5.0,
+   "gen_s": 2.8992098000016995
+  },
+  {
+   "i": 28,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\28.wav",
+   "spoken_form": "Coffee shops cost you forty six point two zero euros across fourteen visits.",
+   "aborted": null,
+   "audio_s": 5.16,
+   "gen_s": 3.10035130000324
+  },
+  {
+   "i": 29,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_juno\\29.wav",
+   "spoken_form": "Your emergency fund covers five point five months, about nine thousand nine hundred euros.",
+   "aborted": null,
+   "audio_s": 6.08,
+   "gen_s": 4.029229600011604
+  }
+ ],
+ "fid_woof_mira": [
+  {
+   "i": 0,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\00.wav",
+   "spoken_form": "You spent three hundred and twelve point four zero euros on groceries in October.",
+   "aborted": null,
+   "audio_s": 6.08,
+   "gen_s": 3.9508052000019234
+  },
+  {
+   "i": 1,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\01.wav",
+   "spoken_form": "Rent of nine hundred and fifty goes out on the third.",
+   "aborted": null,
+   "audio_s": 4.72,
+   "gen_s": 3.207407099980628
+  },
+  {
+   "i": 2,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\02.wav",
+   "spoken_form": "Your portfolio is up two point four percent since March twelfth.",
+   "aborted": null,
+   "audio_s": 5.36,
+   "gen_s": 3.3061376999830827
+  },
+  {
+   "i": 3,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\03.wav",
+   "spoken_form": "Your net worth is forty eight thousand two hundred and fifty euros.",
+   "aborted": null,
+   "audio_s": 5.92,
+   "gen_s": 3.7774195999954827
+  },
+  {
+   "i": 4,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\04.wav",
+   "spoken_form": "You paid eighty nine euros and ninety nine cents for the gym membership on January fifth.",
+   "aborted": null,
+   "audio_s": 6.88,
+   "gen_s": 5.09233410001616
+  },
+  {
+   "i": 5,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\05.wav",
+   "spoken_form": "Savings grew by one thousand two hundred euros, which is seven point five percent more than last year.",
+   "aborted": null,
+   "audio_s": 8.64,
+   "gen_s": 5.431586499995319
+  },
+  {
+   "i": 6,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\06.wav",
+   "spoken_form": "The electricity bill was sixty four point one eight euros, due on the twenty first.",
+   "aborted": null,
+   "audio_s": 6.32,
+   "gen_s": 4.471123800001806
+  },
+  {
+   "i": 7,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\07.wav",
+   "spoken_form": "You have three subscriptions costing forty one point nine seven euros a month.",
+   "aborted": null,
+   "audio_s": 6.0,
+   "gen_s": 3.5786407999985386
+  },
+  {
+   "i": 8,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\08.wav",
+   "spoken_form": "Your salary of three thousand four hundred and eighty euros arrived on the twenty eighth.",
+   "aborted": null,
+   "audio_s": 6.24,
+   "gen_s": 3.704573700000765
+  },
+  {
+   "i": 9,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\09.wav",
+   "spoken_form": "Dining out was two hundred and fifteen euros, down twelve percent from August.",
+   "aborted": null,
+   "audio_s": 6.32,
+   "gen_s": 3.5696143000095617
+  },
+  {
+   "i": 10,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\10.wav",
+   "spoken_form": "The transfer of one thousand five hundred dollars to savings is scheduled for the fifteenth of November.",
+   "aborted": null,
+   "audio_s": 6.88,
+   "gen_s": 4.198642600007588
+  },
+  {
+   "i": 11,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\11.wav",
+   "spoken_form": "Your ETF gained zero point eight percent today.",
+   "aborted": null,
+   "audio_s": 4.8,
+   "gen_s": 2.859122900001239
+  },
+  {
+   "i": 12,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\12.wav",
+   "spoken_form": "You have seventeen thousand nine hundred and three point five five euros across four accounts.",
+   "aborted": null,
+   "audio_s": 6.88,
+   "gen_s": 4.099529500002973
+  },
+  {
+   "i": 13,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\13.wav",
+   "spoken_form": "Insurance costs one hundred and twenty six euros every three months.",
+   "aborted": null,
+   "audio_s": 6.16,
+   "gen_s": 3.6203468999883626
+  },
+  {
+   "i": 14,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\14.wav",
+   "spoken_form": "On the second of November twenty twenty six you paid thirty nine euros to Spotify.",
+   "aborted": null,
+   "audio_s": 6.8,
+   "gen_s": 3.8068075999908615
+  },
+  {
+   "i": 15,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\15.wav",
+   "spoken_form": "Groceries averaged seventy eight point five zero euros per week over six weeks.",
+   "aborted": null,
+   "audio_s": 6.08,
+   "gen_s": 3.2995481999823824
+  },
+  {
+   "i": 16,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\16.wav",
+   "spoken_form": "Your mortgage rate is three point six five percent until twenty thirty one.",
+   "aborted": null,
+   "audio_s": 5.76,
+   "gen_s": 3.4474965000117663
+  },
+  {
+   "i": 17,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\17.wav",
+   "spoken_form": "You withdrew two hundred euros in cash on October ninth.",
+   "aborted": null,
+   "audio_s": 5.2,
+   "gen_s": 3.0871943999954965
+  },
+  {
+   "i": 18,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\18.wav",
+   "spoken_form": "The refund of fourteen point nine nine pounds came back on the thirtieth.",
+   "aborted": null,
+   "audio_s": 5.36,
+   "gen_s": 2.9447746999794617
+  },
+  {
+   "i": 19,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\19.wav",
+   "spoken_form": "Your budget for travel is two thousand seven hundred and fifty euros, and one thousand one hundred and five is left.",
+   "aborted": null,
+   "audio_s": 8.64,
+   "gen_s": 5.05178400001023
+  },
+  {
+   "i": 20,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\20.wav",
+   "spoken_form": "Dividends paid twenty three point zero seven euros in the third quarter.",
+   "aborted": null,
+   "audio_s": 5.12,
+   "gen_s": 2.5953262000111863
+  },
+  {
+   "i": 21,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\21.wav",
+   "spoken_form": "You are thirty five percent of the way to your goal of twenty thousand euros.",
+   "aborted": null,
+   "audio_s": 5.28,
+   "gen_s": 2.5578062999993563
+  },
+  {
+   "i": 22,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\22.wav",
+   "spoken_form": "The phone bill went from twenty nine to thirty four euros in June.",
+   "aborted": null,
+   "audio_s": 4.64,
+   "gen_s": 2.2730022000032477
+  },
+  {
+   "i": 23,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\23.wav",
+   "spoken_form": "Your account ending in four four seven one has a balance of six thousand and twelve point three zero euros.",
+   "aborted": null,
+   "audio_s": 7.84,
+   "gen_s": 4.0973702000046615
+  },
+  {
+   "i": 24,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\24.wav",
+   "spoken_form": "Tax of nineteen percent adds fifty seven euros to the invoice.",
+   "aborted": null,
+   "audio_s": 4.88,
+   "gen_s": 2.458696499990765
+  },
+  {
+   "i": 25,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\25.wav",
+   "spoken_form": "You spent one thousand and forty eight euros and seventy six cents on rent and utilities in September twenty twenty six.",
+   "aborted": null,
+   "audio_s": 9.52,
+   "gen_s": 5.380921700008912
+  },
+  {
+   "i": 26,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\26.wav",
+   "spoken_form": "Interest earned this year is three hundred and ten point zero five euros at two point two five percent.",
+   "aborted": null,
+   "audio_s": 7.2,
+   "gen_s": 4.105834699992556
+  },
+  {
+   "i": 27,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\27.wav",
+   "spoken_form": "The next payment of four hundred and fifty euros is due on December first.",
+   "aborted": null,
+   "audio_s": 5.04,
+   "gen_s": 2.6318855000135954
+  },
+  {
+   "i": 28,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\28.wav",
+   "spoken_form": "Coffee shops cost you forty six point two zero euros across fourteen visits.",
+   "aborted": null,
+   "audio_s": 5.84,
+   "gen_s": 2.9587447000085376
+  },
+  {
+   "i": 29,
+   "wav": "<scratch>\\expC\\audio\\fid_woof_mira\\29.wav",
+   "spoken_form": "Your emergency fund covers five point five months, about nine thousand nine hundred euros.",
+   "aborted": null,
+   "audio_s": 8.48,
+   "gen_s": 4.122208499989938
+  }
+ ]
+}
