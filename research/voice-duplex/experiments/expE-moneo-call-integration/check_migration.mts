@@ -1,5 +1,5 @@
 // Runs the voice_quick_answers migration on the test database inside a transaction, checks it, and rolls back.
-//   node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/check_migration.mts
+//   node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/check_migration.mts
 import { readFileSync } from "node:fs";
 import postgres from "postgres";
 

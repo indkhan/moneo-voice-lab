@@ -1,5 +1,5 @@
 // What each recogniser's transcript makes code do, against what the true text makes it do:
-//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expG/score_outcomes.ts <folder with truth.json and hyp_*.json>
+//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expG-speech-recognition/score_outcomes.ts <folder with truth.json and hyp_*.json>
 // A turn goes to code as in voiceFastTurn(): a question card with no unexplained word, else a ready draft,
 // else the chat model. "right" = the same answer or card as from the true text, "wrong" = code answers
 // or drafts something the true text would not, "handed off" = the chat model gets a turn code could take.

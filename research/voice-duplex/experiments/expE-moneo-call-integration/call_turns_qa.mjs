@@ -1,6 +1,6 @@
 // Sends call turns to the test server (port 3101, moneo-qa backend) the way a voice call does, and prints who
 // answered and how fast. The AI key there is a placeholder, so a turn the model has to answer fails by design.
-//   node research/voice-duplex/experiments/expE/call_turns_qa.mjs [--owner]
+//   node research/voice-duplex/experiments/expE-moneo-call-integration/call_turns_qa.mjs [--owner]
 import { randomUUID } from "node:crypto";
 import { readFileSync } from "node:fs";
 

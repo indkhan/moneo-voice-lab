@@ -1,6 +1,6 @@
 """CPU latency: Whistle embed, exported heads, and Smart Turn v3.2 (int8 ONNX) on the same test clips.
 
-Usage: python bench_latency.py head1,head2   -> expA/latency.json
+Usage: python bench_latency.py head1,head2   -> expA-turn-detection/latency.json
 Run with nothing else heavy on the machine; medians over three rounds are reported.
 """
 import io

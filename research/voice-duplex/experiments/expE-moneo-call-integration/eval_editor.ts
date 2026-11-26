@@ -1,10 +1,10 @@
 // Scores the rule-based card editor on the blind cases. Run from the repo root:
-//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/eval_editor.ts [dev|test|all|v2] [--show]   (dev/test = odd/even ids of set 1; v2 = the hand-written second set)
+//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/eval_editor.ts [dev|test|all|v2] [--show]   (dev/test = odd/even ids of set 1; v2 = the hand-written second set)
 import { readFileSync, writeFileSync } from "node:fs";
 import { editCard } from "@/lib/ai/voice-query-editor";
 import type { Card } from "@/lib/ai/voice-query";
 
-const here = "research/voice-duplex/experiments/expE";
+const here = "research/voice-duplex/experiments/expE-moneo-call-integration";
 const today = "2026-11-15";
 const id = (n: number) => `00000000-0000-4000-8000-${String(n).padStart(12, "0")}`;
 const list = (names: string, offset: number) => names.split(", ").map((name, index) => ({ id: id(offset + index), name }));

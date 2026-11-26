@@ -1,5 +1,5 @@
 // Runs coverage.mts against the desktop app's own database (the app must be running). Read-only; prints counts.
-//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/coverage_desktop.mts [--words]
+//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/coverage_desktop.mts [--words]
 import { readFileSync } from "node:fs";
 import { join } from "node:path";
 

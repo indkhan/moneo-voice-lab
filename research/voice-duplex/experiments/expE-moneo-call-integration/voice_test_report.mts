@@ -1,6 +1,6 @@
 // After a test call on the voice test server: what was asked, who answered (code or the chat model), and how long
 // each answer took. Reads the moneo-qa backend only.
-//   node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/voice_test_report.mts [hours back, default 6]
+//   node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/voice_test_report.mts [hours back, default 6]
 import postgres from "postgres";
 
 const sql = postgres(process.env.SUPABASE_DB_URL!, { prepare: false, max: 1 });

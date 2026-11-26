@@ -41,7 +41,7 @@ Conclusion: nothing open beats GPT-Live out of the box on a laptop, and fine-tun
 
 - Streaming Woof is exact: its decoder is causal, so chunked decoding gives the same samples as whole-sentence decoding (difference about 1e-7). Schedule 1,2,4,8 frames had no playback underruns.
 - Important: numpy's default thread count made Woof 8x slower here (800 ms to first sound). Pin to 1-2 threads.
-- Woof's retry of bad takes cannot work once audio is playing; a streaming guard is needed (TODO: read `expC` guard results).
+- Woof's retry of bad takes cannot work once audio is playing; a streaming guard is needed (TODO: read `expC-speech-synthesis` guard results).
 - Woof is English only (a Japanese model exists). Pocket TTS covers German, French, Spanish, Italian, Portuguese, Dutch.
 
 ### Thinking model (Moneo chat) — DONE
@@ -81,7 +81,7 @@ Same 1,583 English test clips of the Smart Turn v3.2 data (heads trained on abou
 
 - Smart Turn wins by about 2 points, with a home advantage (it was trained on the full train split of this data). Use it for now.
 - A 1.5K-weight probe at 92.7% shows Whistle's features already carry most of the turn signal. More data, an unfrozen top layer and finance-call audio are the way to close the gap; that is a laptop-sized fine-tune.
-- Training of larger heads was stopped early to free the CPU; `expA\train_results.json` has the five finished heads.
+- Training of larger heads was stopped early to free the CPU; `expA-turn-detection\train_results.json` has the five finished heads.
 - Not tested: telling a backchannel from the start of an interruption from audio alone.
 
 ### Small-talk talker — DONE (zero-shot)
@@ -212,7 +212,7 @@ Code (in `lib/ai/`, pure functions, no I/O, 14 unit tests):
 | `voice-say.ts` | Exact money in words (bigint, never rounds), the answer as ordered pieces with the number last, and `rebind()`: where speech resumes after the card changed |
 | `voice-fast-answer.ts` | `fastAnswer()`: words -> card -> `investigate()` on rows in memory -> sentence, or null |
 
-E4, editor accuracy. Test sets were written by a separate agent that never saw the rules (`experiments/expE`): set 1 has 300 cases (script-assisted, repetitive phrasing), set 2 has 200 hand-written cases in 20 speaking styles. Each case is 1-3 turns with a gold card, or "must hand off".
+E4, editor accuracy. Test sets were written by a separate agent that never saw the rules (`experiments/expE-moneo-call-integration`): set 1 has 300 cases (script-assisted, repetitive phrasing), set 2 has 200 hand-written cases in 20 speaking styles. Each case is 1-3 turns with a gold card, or "must hand off".
 
 | Run | Exact | Wrong answer | Handed off | Out-of-scope refused |
 |---|---|---|---|---|
@@ -291,13 +291,13 @@ Open before this could merge to main: whether the fast path should sit behind a 
 ## 12. Settings switch and a real-voice test setup (2026-11-16)
 
 - "Quick answers in calls" switch in Settings, on by default (`voice_quick_answers`, migration `202611150001`). The migration was run on the test database inside a rolled-back transaction: default on, false and true save, a text value is refused.
-- Voice test setup in `experiments/expE`: `voice_test_seed.mts` adds a year of made-up spending (364 rows, marked "Voice test", `--remove` deletes them) to the test backend's owner workspace; `voice_test_server.mjs` runs this branch on port 3101 with a real OpenAI key; `voice_test_report.mts` lists each call turn, who answered and how long it took.
+- Voice test setup in `experiments/expE-moneo-call-integration`: `voice_test_seed.mts` adds a year of made-up spending (364 rows, marked "Voice test", `--remove` deletes them) to the test backend's owner workspace; `voice_test_server.mjs` runs this branch on port 3101 with a real OpenAI key; `voice_test_report.mts` lists each call turn, who answered and how long it took.
 - Checked with text turns on the seeded workspace: "groceries last month" EUR 428.68, "no wait, this month" EUR 219.34, "and compared to the month before?" EUR 219.34, EUR 209.34 less than last month, "how many transactions this year" 306. Code turns took 0.8-0.9 s on the dev server once compiled.
 - Blocked: the OpenAI API key on this laptop has no credits left, so GPT-Live cannot start a call and the chat model cannot answer the handed-off turns. A spoken test through GPT-Live needs credits. Recorded voice clips do not: they can go through the local recogniser (Whistle) and the editor.
 
 ## 13. First real recording from the owner (2026-11-16)
 
-One 251 s phone recording with 18 spoken requests, said the way the owner really talks. Audio and transcripts stay outside the repo (`<home>/moneo-voice-tests/call1`); only the scripts are here (`experiments/expF`, `experiments/expE/real_call.ts`). Split at pauses of 1 s with Silero VAD, transcribed with Whistle and, as a reference, Whisper large-v3-turbo (no human transcript exists, so "difference" below is against that reference, which favours Whisper-family models).
+One 251 s phone recording with 18 spoken requests, said the way the owner really talks. Audio and transcripts stay outside the repo (`<home>/moneo-voice-tests/call1`); only the scripts are here (`experiments/expF-recording-evaluation`, `experiments/expE-moneo-call-integration/real_call.ts`). Split at pauses of 1 s with Silero VAD, transcribed with Whistle and, as a reference, Whisper large-v3-turbo (no human transcript exists, so "difference" below is against that reference, which favours Whisper-family models).
 
 What the owner actually asks (18 requests):
 
@@ -379,7 +379,7 @@ Two more phone recordings from the owner, kept outside the repo (`<home>/moneo-v
 - **Reading script** (162 s, part 1 of `reading-script.md`): 30 known sentences. Split at 1 s pauses into 26 clips; four clips hold two sentences each, because the reader did not always pause.
 - **Free talk** (180 s): 13 utterances, one of them filler. New kinds of request: lending money to a friend and finding that transfer, total and "liquid" money, income other than the job, cash spent or received (also in pounds), and a bill split 75/25.
 
-**Recognisers against the true text** (first measurement with a human-known transcript; `expF/score_reading.py` compares the whole reading as one text, numbers as words):
+**Recognisers against the true text** (first measurement with a human-known transcript; `expF-recording-evaluation/score_reading.py` compares the whole reading as one text, numbers as words):
 
 | Recogniser | Word errors | Key words kept | Time vs audio (2 threads) |
 |---|---|---|---|
@@ -422,7 +422,7 @@ The reading script now has four parts for other speakers: the 30 sentences, 21 m
 
 Market check on 2026-11-18 (web search, model cards): the new small recognisers since the last round are Moonshine v2 Streaming (Jan 2026, 34M/123M/245M, MIT), NVIDIA Nemotron Speech Streaming EN 0.6B and Nemotron 3.5 ASR Streaming 0.6B (multilingual), Parakeet Unified EN 0.6B (Apr 2026) and Parakeet Ultra, Qwen3-ASR 0.6B/1.7B (Jan 2026, Apache-2.0), IBM Granite Speech 5.0 470M TurboCTC (Oct 2026), Cohere Transcribe 2B (Mar 2026), Voxtral Mini 4B Realtime (Feb 2026), and Reson8 Rumble-2-Flash (0.5B, 45 languages, released 2026-11-18). Too large for a laptop and left out: Salesforce SOV-Transcribe-1 (26.6B, 2026-11-12, top open model on Artificial Analysis), Nemotron 3.5 Transcribe (30B), Granite Speech 5.0 2B was not packaged.
 
-Method: one runtime for all of them, **transcribe.cpp 0.4.2** (ggml; 16 families; prebuilt Windows CPU/Vulkan library; GGUF files checked against each family's reference by its authors), Q8_0 weights, CPU, 4 threads (`expG/bench_asr.py`). Each model with and without the owner's names as hints where the model takes them (only Whisper and Qwen3-ASR do in this runtime). Scores on the reading recording, against its true text: word errors (`expF/score_reading.py`) and, more important, **what code does with the transcript** against what it does with the true text (`expG/score_outcomes.ts`, 17 of 26 clips go to code with the true text). Streaming is not a criterion: a batch model can be wrapped.
+Method: one runtime for all of them, **transcribe.cpp 0.4.2** (ggml; 16 families; prebuilt Windows CPU/Vulkan library; GGUF files checked against each family's reference by its authors), Q8_0 weights, CPU, 4 threads (`expG-speech-recognition/bench_asr.py`). Each model with and without the owner's names as hints where the model takes them (only Whisper and Qwen3-ASR do in this runtime). Scores on the reading recording, against its true text: word errors (`expF-recording-evaluation/score_reading.py`) and, more important, **what code does with the transcript** against what it does with the true text (`expG-speech-recognition/score_outcomes.ts`, 17 of 26 clips go to code with the true text). Streaming is not a criterion: a batch model can be wrapped.
 
 | Recogniser | Size | Word errors | Key words kept | Code right (of 17) | Wrong card | Handed off | Time vs audio (CPU, 4 thr) |
 |---|---|---|---|---|---|---|---|

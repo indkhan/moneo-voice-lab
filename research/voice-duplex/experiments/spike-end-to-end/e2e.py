@@ -11,7 +11,7 @@ os.environ.setdefault("OMP_NUM_THREADS", "2"); os.environ.setdefault("OPENBLAS_N
 os.environ.setdefault("CACTUS_TELEMETRY", "0")
 import numpy as np
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-for p in ("spike", "expA", os.path.join("expB", "scripts"), os.path.join("expC", "woof_stream")): sys.path.insert(0, os.path.join(ROOT, p))
+for p in ("spike-end-to-end", "expA-turn-detection", os.path.join("expB-routing-and-backchannels", "scripts"), os.path.join("expC-speech-synthesis", "woof_stream")): sys.path.insert(0, os.path.join(ROOT, p))
 import cactus
 from llm import stream as llm_stream
 from eval_smartturn import build_session, features
@@ -28,7 +28,7 @@ def resample(x, a, b):
     n = int(len(x) * b / a); return np.interp(np.linspace(0, len(x) - 1, n), np.arange(len(x)), x).astype(np.float32)
 
 # ---- pick utterances and synthesize the "user" with a different TTS and voice
-test = rows(os.path.join(ROOT, "expB", "data", "test.jsonl"))
+test = rows(os.path.join(ROOT, "expB-routing-and-backchannels", "data", "test.jsonl"))
 def pick(label, n): return [r for r in test if r["label"] == label and 5 <= len(r["text"].split()) <= 16 and not r["assistant_speaking"]][:n]
 utts = [dict(text=r["text"], label=r["label"], pause=None) for r in pick("DELEGATE_READ", 10) + pick("DELEGATE_WRITE", 6) + pick("SMALLTALK", 6)]
 for r in pick("DELEGATE_READ", 14)[10:14]:
@@ -52,7 +52,7 @@ for u in utts:
 del ptts, pst
 torch.set_num_threads(1)
 
-router = TfidfRouter("lr").fit(rows(os.path.join(ROOT, "expB", "data", "train.jsonl")))
+router = TfidfRouter("lr").fit(rows(os.path.join(ROOT, "expB-routing-and-backchannels", "data", "train.jsonl")))
 st = build_session(os.path.join(ROOT, "models", "smartturn", "smart-turn-v3.2-cpu.onnx")); st_in = st.get_inputs()[0].name
 def turn_done(buf):
     t = time.perf_counter(); p = float(np.ravel(st.run(None, {st_in: features(buf)})[0])[0]); return p, (time.perf_counter() - t) * 1000

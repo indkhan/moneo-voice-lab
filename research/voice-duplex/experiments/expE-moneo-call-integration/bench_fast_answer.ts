@@ -1,5 +1,5 @@
 // Times the whole fast path (words -> card -> answer) on a synthetic ledger. Run from the repo root:
-//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/bench_fast_answer.ts
+//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/bench_fast_answer.ts
 import { writeFileSync } from "node:fs";
 import { fastAnswer, type CallData } from "@/lib/ai/voice-fast-answer";
 import type { InvestigationRow } from "@/lib/finance/investigation";
@@ -41,4 +41,4 @@ for (const size of [2_000, 20_000, 100_000]) {
   result[`${size} rows`] = { "median ms": +times[Math.floor(times.length / 2)].toFixed(1), "p95 ms": +times[Math.floor(times.length * 0.95)].toFixed(1), "max ms": +times.at(-1)!.toFixed(1) };
 }
 console.table(result);
-writeFileSync("research/voice-duplex/experiments/expE/bench_fast_answer.json", JSON.stringify(result, null, 2));
+writeFileSync("research/voice-duplex/experiments/expE-moneo-call-integration/bench_fast_answer.json", JSON.stringify(result, null, 2));

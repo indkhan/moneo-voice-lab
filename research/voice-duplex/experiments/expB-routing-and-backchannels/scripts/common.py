@@ -4,7 +4,7 @@ import json, os, sys, threading, time
 S = r"<scratch>"
 B = os.path.join(S, "expB")
 DATA = os.path.join(B, "data")
-sys.path.insert(0, os.path.join(S, "spike"))
+sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "spike-end-to-end"))
 
 LABELS = ["DELEGATE_READ", "DELEGATE_WRITE", "CORRECTION", "META", "SMALLTALK", "BACKCHANNEL", "INCOMPLETE"]
 TOPICS = ["groceries", "eating out", "rent", "bills", "subscriptions", "transport", "shopping", "travel", "health",

@@ -1,5 +1,5 @@
 // Runs transcripts of a real recording through the "add" draft editor. Transcripts stay outside the repo:
-//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/real_adds.ts <folder with transcripts.json and reference.json>
+//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/real_adds.ts <folder with transcripts.json and reference.json>
 import { readFileSync } from "node:fs";
 import { editDraft, type Draft } from "@/lib/ai/voice-draft";
 

@@ -1,5 +1,5 @@
 // Runs transcripts of a real recording through the question editor. The transcripts stay outside the repo:
-//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/real_call.ts <folder with transcripts.json and reference.json>
+//   node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/real_call.ts <folder with transcripts.json and reference.json>
 // Prints, per clip and per recogniser, whether code would answer or hand off, and the words it could not explain.
 import { readFileSync } from "node:fs";
 import { editCard } from "@/lib/ai/voice-query-editor";

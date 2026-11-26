@@ -1,7 +1,7 @@
 """Download Smart Turn v3.2 parquet shards, keep English clips, embed the last 5 s with Whistle.
 
 Usage: python embed_shards.py <train|test> <first_shard> <last_shard_exclusive>
-Writes expA/emb/<split>_<shard>.npz with float16 frames (concatenated), offsets, labels and metadata.
+Writes expA-turn-detection/emb/<split>_<shard>.npz with float16 frames (concatenated), offsets, labels and metadata.
 """
 import io
 import json

@@ -1,7 +1,7 @@
 /**
  * E1: how many past questions could the fast path have answered? Read-only, prints counts only, writes nothing.
  * It reads real questions, so the owner runs it (or says yes to running it) on their own data:
- *   node --env-file=.env node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/coverage.mts [--words]
+ *   node --env-file=.env node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/coverage.mts [--words]
  * `--words` also prints the 40 most common words the rules could not explain (single words, no sentences).
  */
 import postgres from "postgres";

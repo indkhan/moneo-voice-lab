@@ -37,19 +37,19 @@ The honest summary: the typed-object idea works and is safe (it hands off instea
 
 ## How to run things
 
-All from the repo root. `npm ci` first.
+Run the npm, TypeScript, and QA commands from the Moneo checkout root with the lab's experiment tree at `research/voice-duplex/experiments/`. Run `npm ci` in that checkout first.
 
 | What | Command |
 |---|---|
 | Unit tests for this work | `npx vitest run lib/ai/voice-query.test.ts lib/ai/voice-draft.test.ts lib/ai/voice-call-controller.test.ts` |
 | Everything before finishing | `npm test`, `npm run lint`, `npm run typecheck` (`components/ai-message-remount.test.tsx` sometimes times out under load; rerun it alone) |
-| Editor on the generated sets | `node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/eval_editor.ts dev\|test\|v2 [--show]` |
-| A recording: split, transcribe | `experiments/expF/split.py <audio> <folder>`, then `transcribe.py <folder>` and `reference.py <folder>` (Python with `av`, `silero-vad`, `cactus-compute`, `faster-whisper`) |
-| A recording through the editors | `.../expE/real_call.ts <folder>` (questions), `.../expE/real_adds.ts <folder>` (adds) |
+| Editor on the generated sets | `node node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/eval_editor.ts dev\|test\|v2 [--show]` |
+| A recording: split, transcribe | `experiments/expF-recording-evaluation/split.py <audio> <folder>`, then `transcribe.py <folder>` and `reference.py <folder>` (Python with `av`, `silero-vad`, `cactus-compute`, `faster-whisper`) |
+| A recording through the editors | `.../expE-moneo-call-integration/real_call.ts <folder>` (questions), `.../expE-moneo-call-integration/real_adds.ts <folder>` (adds) |
 | Test backend | `npm run setup -- --qa`, then `npm run qa:auth` |
-| Made-up data for it | `node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/voice_test_seed.mts` (`--remove` undoes it) |
-| This branch on port 3101, no AI cost | `node research/voice-duplex/experiments/expE/qa_server_3101.mjs` |
-| Call turns as text through the real route | `node research/voice-duplex/experiments/expE/call_turns_qa.mjs --owner "first turn" "second turn"` |
+| Made-up data for it | `node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/voice_test_seed.mts` (`--remove` undoes it) |
+| This branch on port 3101, no AI cost | `node research/voice-duplex/experiments/expE-moneo-call-integration/qa_server_3101.mjs` |
+| Call turns as text through the real route | `node research/voice-duplex/experiments/expE-moneo-call-integration/call_turns_qa.mjs --owner "first turn" "second turn"` |
 | Same server with a real OpenAI key (spoken test, costs money) | `voice_test_server.mjs`, then `voice_test_report.mts` |
 
 ## Code map

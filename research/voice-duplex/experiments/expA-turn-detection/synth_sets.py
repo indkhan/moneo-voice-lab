@@ -1,4 +1,4 @@
-"""Synthesize two small Pocket TTS sets at 16 kHz mono (expA/synth/*.npz).
+"""Synthesize two small Pocket TTS sets at 16 kHz mono (expA-turn-detection/synth/*.npz).
 
 finance: complete finance requests, text-truncated ones ("How much did I spend on"), and audio-truncated ones
          (the complete sentence cut after a mid-sentence word using Whistle word timestamps).

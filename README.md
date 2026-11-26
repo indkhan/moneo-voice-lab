@@ -17,3 +17,9 @@ The lab gives voice experiments their own development cycle. [Moneo](https://git
 The [research log](research/voice-duplex/LOG.md) records model evaluations, benchmark results, and design decisions. The [roadmap](research/voice-duplex/ROADMAP.md) and [experiments](research/voice-duplex/experiments/) were imported from Moneo at commit `7911afae`. The import also includes the in-progress Sherpa-ONNX benchmark from that checkout.
 
 Some scripts require Moneo's QA environment, model downloads, or local audio inputs. The repository includes benchmark results and text from test sessions. Voice recordings are kept outside the repository.
+
+## Repository map
+
+- [Experiment index](research/voice-duplex/experiments/README.md) links each research area to its scripts, fixtures, and results.
+- [Research log](research/voice-duplex/LOG.md) records the findings. The [roadmap](research/voice-duplex/ROADMAP.md) includes the Moneo code map and QA commands.
+- [Architecture](research/voice-duplex/architecture.html) and [implementation plan](research/voice-duplex/plan.html) are standalone HTML documents. The [reading script](research/voice-duplex/reading-script.md) contains the reference text for speech recognition evaluation.

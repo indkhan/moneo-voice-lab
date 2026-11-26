@@ -1,7 +1,7 @@
 """Train small end-of-turn heads on frozen Whistle encoder frames and evaluate on the official test split.
 
 Usage: python train_heads.py [--epochs 25] [--only name1,name2]
-Reads expA/emb/{train,test}_*.npz, writes expA/heads/<name>.pt, expA/head_probs.npz and expA/train_results.json.
+Reads expA-turn-detection/emb/{train,test}_*.npz, writes expA-turn-detection/heads/<name>.pt, expA-turn-detection/head_probs.npz and expA-turn-detection/train_results.json.
 """
 import argparse
 import glob

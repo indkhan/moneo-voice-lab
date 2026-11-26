@@ -1,6 +1,6 @@
 // Fills the test backend's owner workspace with a year of made-up spending, so a test call has real numbers.
 // Only the moneo-qa backend (.env.qa); every row it adds is marked "Voice test" and `--remove` deletes them again.
-//   node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE/voice_test_seed.mts [--remove]
+//   node --env-file=.env.qa node_modules/tsx/dist/cli.mjs research/voice-duplex/experiments/expE-moneo-call-integration/voice_test_seed.mts [--remove]
 import postgres from "postgres";
 
 if (!/:5452\d\//.test(process.env.SUPABASE_DB_URL ?? "")) throw new Error("Refusing to run: this is not the moneo-qa database");
