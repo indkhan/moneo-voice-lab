@@ -20,6 +20,8 @@ Some scripts require Moneo's QA environment, model downloads, or local audio inp
 
 ## Repository map
 
+- [Project plan](plan.md) defines the long-term goals and research principles.
+
 - [Experiment index](research/voice-duplex/experiments/README.md) links each research area to its scripts, fixtures, and results.
 - [Research log](research/voice-duplex/LOG.md) records the findings. The [roadmap](research/voice-duplex/ROADMAP.md) includes the Moneo code map and QA commands.
 - [Architecture](research/voice-duplex/architecture.html) and [implementation plan](research/voice-duplex/plan.html) are standalone HTML documents. The [reading script](research/voice-duplex/reading-script.md) contains the reference text for speech recognition evaluation.
