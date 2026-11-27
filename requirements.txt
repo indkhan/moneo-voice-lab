@@ -1,0 +1,37 @@
+# Python packages used by the experiments. Install only what the experiment you run needs:
+#   python -m pip install -r requirements.txt
+# Versions are not pinned: the experiments were run with whatever was current in Nov 2026.
+# TypeScript scripts run from a Moneo checkout (npm ci there); see research/voice-duplex/ROADMAP.md.
+
+# Core (most experiments)
+numpy
+scipy
+soundfile
+scikit-learn          # expB routers
+
+# Audio in, splitting, voice activity (expF, expA)
+av
+silero-vad
+torch
+
+# Speech to text (expF, expG, spikes)
+faster-whisper
+cactus-compute        # Whistle recogniser and embeddings
+sherpa-onnx           # expG bench_sherpa.py
+transformers          # expG bench_transformers.py
+huggingface_hub
+# transcribe_cpp      # expG bench_asr.py: Python binding of transcribe.cpp 0.4.2, install from its release
+
+# Turn detection (expA)
+onnxruntime
+pyarrow               # Smart Turn dataset shards
+
+# Text to speech (expC)
+pocket-tts
+# underdog_woof       # optional, non-commercial licence; install from Underdog's release
+
+# Small local language models (expB talker, eval_local)
+llama-cpp-python
+
+# Real-time audio transport (spike-end-to-end, expD)
+livekit

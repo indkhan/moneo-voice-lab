@@ -1,7 +1,7 @@
 // Local-only proxy so Python spikes can call the owner's ChatGPT plan through Moneo's own sign-in code.
-// Run from the main checkout: node --env-file=.env node_modules/tsx/dist/cli.mjs <this file>
+// Run from the Moneo checkout root (with this experiment tree at research/voice-duplex/experiments/): node --env-file=.env node_modules/tsx/dist/cli.mjs <this file>
 import { createServer } from "node:http";
-import { chatgptFetch, chatgptStatus } from "C:/codebases/Moneo/lib/ai/chatgpt";
+import { chatgptFetch, chatgptStatus } from "@/lib/ai/chatgpt";
 
 const port = 8787;
 createServer(async (req, res) => {

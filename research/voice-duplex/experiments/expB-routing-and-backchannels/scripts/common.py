@@ -1,7 +1,9 @@
 """Shared constants for experiment B (router + talker)."""
 import json, os, sys, threading, time
 
-S = r"<scratch>"
+# Scratch folder for generated data and model outputs (kept outside the repo).
+# Set MONEO_VOICE_SCRATCH, e.g. export MONEO_VOICE_SCRATCH=~/moneo-voice-scratch
+S = os.path.expanduser(os.environ.get("MONEO_VOICE_SCRATCH", "~/moneo-voice-scratch"))
 B = os.path.join(S, "expB")
 DATA = os.path.join(B, "data")
 sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "spike-end-to-end"))
