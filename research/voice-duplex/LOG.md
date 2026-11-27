@@ -172,6 +172,10 @@ The open gap that matters most:
 
 Direction chosen for the next phase (proposal, not built): **live-query duplex**. The call is treated as continuous editing of one typed finance query (metric, category, period, account, comparison) that deterministic Moneo code answers in milliseconds. Tiny local models turn each new word, including words spoken over the assistant, into an edit of that query; speech is a view of the query that can be re-bound mid-sentence. The big model works between calls and on misses.
 
+## 6. (no section 6)
+
+The log imported from Moneo has no section 6; the numbering is kept so older references to sections 7-17 stay valid.
+
 ## 7. Audit of the live-query plan (2026-11-15, one Fable agent, read the codebase)
 
 Verdict: **right direction, wrong plan as written.** Build it as a typed fast path with the chat agent as fallback, not as a new query language.

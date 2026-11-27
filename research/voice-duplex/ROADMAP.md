@@ -1,6 +1,13 @@
 # Voice call research: roadmap
 
-For anyone (person or agent) picking up work on branch `t3/research-self-hosted-voice`. Read this first, then the part of `LOG.md` your package points to. `LOG.md` is the full history with every measurement; this file is only what is true now and what to do next.
+For anyone (person or agent) picking up voice research in this lab repo. Read this first, then the part of `LOG.md` your package points to. `LOG.md` is the full history with every measurement; this file is only what is true now and what to do next.
+
+## Two repositories
+
+- **This lab repo** (`moneo-voice-lab`) holds the research: `LOG.md`, this roadmap, the experiment scripts, fixtures and result totals. It was imported from Moneo branch `t3/research-self-hosted-voice` at commit `7911afae`.
+- **Moneo** (`indkhan/Moneo`) holds the product code the experiments call: `lib/ai/voice-*.ts`, `app/api/chat/route.ts`, the finance tools and the QA backend. TypeScript scripts here import it through the `@/` path alias, so run them from a Moneo checkout with this experiment tree copied or linked to `research/voice-duplex/experiments/` (see "How to run things").
+- Python experiments run on their own: `pip install -r requirements.txt` (install only what the experiment needs). Experiment B writes its generated data to `MONEO_VOICE_SCRATCH` (default `~/moneo-voice-scratch`).
+- Recordings, transcripts and model files never enter either repo; `.gitignore` blocks the usual audio, hypothesis and model file types.
 
 ## Goal
 
@@ -19,7 +26,7 @@ It has to work for **any owner, not just the first one**: other accents, other w
 | "Add" draft with corrections, becomes a tap-to-save card | built for one-off spending and income with a known shop or category | `voice-draft.ts`; LOG 14, 15 |
 | Real recordings (one speaker: 18 free requests, 30 read sentences, 12 more free) | code handles 6 + 13 + 0 right with a good transcript, 0 wrong after the fixes in LOG 16 | LOG 13, 14, 16 |
 | Generated test sets (500 cases) | 99%, but they were too clean: 0 of 18 on first contact with real speech | LOG 8, 13 |
-| Speech-to-text on real voice | against the true reading text: Whistle 24% of words wrong, Whisper base.en 12% (working choice), large-v3-turbo 7.5% | LOG 13, 16 |
+| Speech-to-text on real voice | against the true reading text: Whistle 24% of words wrong, Whisper base.en 12% (working choice, the only wrong card), Qwen3-ASR 0.6B with the owner's names as hints 9.9% and 12 of 17 right (best laptop-sized candidate), large-v3-turbo with names 7.8%; fair CPU times and the larger models still running | LOG 13, 16, 17 |
 | A spoken call through GPT-Live with the fast path | **not tested, and will not be soon**: no budget for OpenAI credits; test through a local recogniser and the real chat route instead | LOG 12 |
 | Ears (talking over the assistant), local speech engine, changing an answer mid-sentence | not built; only simulated measurements | LOG 2 |
 
@@ -29,10 +36,10 @@ The honest summary: the typed-object idea works and is safe (it hands off instea
 
 1. **Safety of money.** Code on the fast path only reads. A write is only ever a card the owner taps (`agent_proposals`). Never create, change or accept a record from speech directly, and never act on words that are still arriving.
 2. **Never guess.** A question is answered by code only when every word is explained; a draft is shown only with a clear amount and something the owner already has. Otherwise return null and let the chat model take the turn. A wrong spoken number is the worst failure there is.
-3. **Test backend only.** Follow `AGENTS.md`: use `moneo-qa` (`.env.qa`), never the owner's data. Recordings and transcripts are personal data: keep them outside the repo and commit only scripts and totals.
+3. **Test backend only.** Follow Moneo's `AGENTS.md`: use `moneo-qa` (`.env.qa`), never the owner's data. Recordings and transcripts are personal data: keep them outside the repo and commit only scripts and totals.
 4. **Real speech is the test.** Generated cases are a regression check. A change counts when it moves the real-recording scoreboard without adding a wrong answer.
 5. **Write down what you measured, including failures,** in `LOG.md` as a new numbered section. Say what was not measured.
-6. **Commit every small step** on this branch with a plain message. Do not push, open a pull request or merge unless asked.
+6. **Commit every small step** on a work branch with a plain message. Do not push, open a pull request or merge unless asked. Product code changes go to Moneo; research notes, scripts and totals come here.
 7. **Keep parts swappable.** Nothing may assume one recogniser, one voice or one chat model.
 
 ## How to run things
